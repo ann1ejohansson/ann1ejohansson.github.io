@@ -14,15 +14,35 @@ h1 {
     color: #473198;
 }
 
+h2 {
+    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+    font-size: 18;
+    font-weight: 300;
+    color: #473198;
+}
+
+h3 {
+    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+    font-size: 14;
+    font-weight: 300;
+    color: dimgray 
+}
+
 .container {
     display: flex;
     flex-direction: row;
     padding: 20px;
     max-width: 80%;
     margin: auto;
+    height: 75vh;
+    min-height: 100vh;
 }
 
 .left-column {
+    width: 30%;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
     flex: 1;
     text-align: right;
     border-right: 0.5px solid #ccc;
@@ -77,6 +97,7 @@ h1 {
 .right-column {
     flex: 2;
     padding-left: 20px;
+    overflow-y: auto;
 }
 
 .right-column h2 {
@@ -98,3 +119,35 @@ a {
 a:hover {
     color: #0B7B88;
 }
+
+.project-container {
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.project-container h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    font-weight: 600;
+    color: #525252;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+.project-container h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    font-weight: 350;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.project-container p {
+    font-family: Helvetica;
+    font-weight: 350;
+    font-size: 12px; 
+    line-height: 1.3;
+    margin-bottom: 0px;
+    color: #333333;
+}
+
