@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Read More</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 10px;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #473198;
+            color: white;
+            padding: 10px 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 11px;
+            padding: 5px 7px;
+        }
+        header nav a:hover {
+            background-color: white;
+            border-radius: 3px;
+            color: #473198;
+            font-weight: 500;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: #473198;
+        }
+        p {
+            font-size: 12px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        a {
+            color: #1D9FB7; /* Complimentary color */
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #0B7B88;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="publications.html">Publications</a>
+            <a href="conferences.html">Conferences and Workshops</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>PhD Project: Optimizing Personalized Learning at Scale</h2>
+        <p>
+            Big online data is increasingly valuable in the study of latent cognitive processes. 
+            In the field of educational psychology, the heightened popularity of online learning environments (OLEs) in recent decades 
+            invites new avenues for studying and promoting learning. OLEs have the advantage of providing large-scale educational data; 
+            the platform Prowise Learn, for example, provides responses to math- and language-related items from hundreds of thousands 
+            of students across more than a decade. Such rich data provide a unique opportunity to dive into the intricacies of learning 
+            processes that are harder to detect in traditional lab studies or with survey data.
+        </p>
+        <p>
+            Specifically, this project aims to promote success in learning by investigating its counterpart: failure. Failure-related 
+            behavior, such as making errors, can inform educational measurement and personalized learning algorithms. We leverage big 
+            educational data and apply statistical models to answer questions related to failure in learning. Research questions include:
+        </p>
+        <ul>
+            <li><strong>What causes underlie errors?</strong> We use the Systematic Error Tracing Algorithm to detect which misconceptions are likely leading to individuals’ error responses.</li>
+            <li><strong>What are the consequences of making errors?</strong> We aim to extend and triangulate recent findings that making several errors in a row predicts quitting. We can also relate this to problem-skipping behavior.</li>
+            <li><strong>Is there individual variability in these relationships?</strong> We aim to find student-specific factors that can be targeted to improve the learning process of each student. In the context of quitting, do some students persist better after errors than others, and what potential factors underlie these differences?</li>
+            <li><strong>Intervention research:</strong> We conduct A/B tests to causally determine the impact of our investigated factors on student success. These studies also allow us to inform the algorithm of the system to optimize its design and implementation.</li>
+        </ul>
+        <p>
+            Ultimately, answering these questions will help us to understand cognitive processes and inform educational practice. 
+            From a methodological standpoint, the vast amount of data available allows us to utilize contemporary statistical techniques 
+            derived from both psychometrics and artificial intelligence research to investigate the proposed questions. Lastly, we aim to 
+            use several independent datasets from different OLEs to enable triangulation of findings and to evaluate the validity and 
+            reliability of identified predictors.
+        </p>
+        <p>
+            This project is running from 2023 to 2027 and is supervised by Alexander Savi, Abe Hofman, and Han van der Maas at the Universityu of Amsterdam. 
+        </p>
+    </div>
+    <footer>
+        &copy; 2024 Annie Johansson. All rights reserved.
+    </footer>
+</body>
+</html>
