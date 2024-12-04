@@ -145,9 +145,18 @@ a:hover {
 .project-container p {
     font-family: Helvetica;
     font-weight: 350;
-    font-size: 12px; 
+    font-size: 13px; 
     line-height: 1.3;
     margin-bottom: 0px;
     color: #333333;
 }
 
+.project-container a {
+    color: #1D9FB7; 
+    text-decoration: underline; 
+    font-size: 14px;
+}
+
+.project-container a:hover {
+    color: #0B7B88;
+}
