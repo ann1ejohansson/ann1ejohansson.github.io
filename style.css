@@ -73,6 +73,7 @@ h1 {
     border-color: #473198;
     transform: scale(0.95);
 }
+
 .right-column {
     flex: 2;
     padding-left: 20px;
@@ -87,10 +88,6 @@ h1 {
 
 .right-column p {
     font-size: 14px;
-}
-
-.left-column {
-    border-right: 0.5px solid #473198;
 }
 
 a {
