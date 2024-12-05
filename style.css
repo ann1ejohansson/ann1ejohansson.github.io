@@ -160,3 +160,79 @@ a:hover {
 .project-container a:hover {
     color: #0B7B88;
 }
+
+/* General Styles for Mobile */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        gap: 10px; 
+        margin-bottom: 20px; 
+    }
+
+    header nav a {
+        display: block; /* Ensure links are block-level for proper alignment */
+        width: 100%; /* Optionally stretch buttons to fill the width */
+        max-width: 200px; /* Limit the width for centered alignment */
+        text-align: center; /* Center the text */
+        padding: 10px; /* Add padding for better tap area */
+        border-radius: 5px; /* Make buttons look nicer with rounded corners */
+    }
+
+
+    .container {
+        flex-direction: column; 
+    }
+
+    .right-column {
+        margin-top: 20px;
+        flex: none;
+        width: 100%
+    }
+
+    .left-column {
+        flex: none;
+        text-align: center;
+        margin-bottom: 20px; 
+        width: 100%;
+        border-right: 0.5px solid transparent;
+    }
+
+    .vertical-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center menu items horizontally */
+        gap: 5px; /* Add space between menu items */
+    }
+
+    .vertical-menu a {
+        align-items: center;
+        text-align: center;
+    }
+
+    .vertical-menu .menu-item {
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 16px;
+    } 
+    
+    h2, h3, p {
+        font-size: 14px; 
+    }
+
+    img {
+        width: 120px; 
+        height: 120px;
+    }
+    a {
+        font-size: 14px; 
+        
+        display: inline-block; /* Ensure clickable area */
+    }
+}
+
+
