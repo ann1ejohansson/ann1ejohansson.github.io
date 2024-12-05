@@ -189,7 +189,8 @@ a:hover {
         margin-top: 20px;
         flex: none;
         width: 100%;
-        overflow-y: hidden;
+        overflow: hidden;
+        height: auto;
     }
 
     .left-column {
