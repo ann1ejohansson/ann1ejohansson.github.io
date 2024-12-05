@@ -187,6 +187,7 @@ a:hover {
 
     .right-column {
         margin-top: 20px;
+        margin-bottom: 50px;
         flex: none;
         width: 100%;
         overflow: hidden;
