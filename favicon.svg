@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <circle cx="50" cy="50" r="50" fill="#473198"/>
-  <text x="50" y="67" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="300" text-anchor="middle" fill="white">AJ</text>
+  <!-- A -->
+  <path d="M17 74 L32 26 L47 74 M22 56 L42 56"
+        stroke="white" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- J -->
+  <path d="M68 26 L68 68 Q68 78 57 78"
+        stroke="white" stroke-width="5.5" stroke-linecap="round" fill="none"/>
 </svg>
