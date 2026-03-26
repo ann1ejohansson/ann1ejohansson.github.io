@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <!-- EDIT: Change the title tag below to update the browser tab title -->
     <title>Projects – Annie Johansson</title>
 </head>
 
@@ -15,140 +17,139 @@
     <div class="container">
 
         <!-- ============================================================
-             LEFT COLUMN – sidebar with profile info and navigation
-             EDIT: Update name, title, affiliation, or email here.
-             This block is the same across all pages — update all pages
-             if you change anything here.
+             LEFT COLUMN — sidebar (same on every page)
              ============================================================ -->
         <div class="left-column">
             <img src="/images/profile.jpg" alt="Profile photo of Annie Johansson">
             <h1>Annie Johansson</h1>
-            <p>PhD Candidate <br> Optimizing Personalized Learning at Scale</p>
+            <p>PhD Candidate<br>Optimizing Personalized Learning at Scale</p>
+            <p>Department of Psychology<br>University of Amsterdam</p>
             <p>
-                Department of Psychology
-                <br>University of Amsterdam
-            </p>
-            <p>
-                <a target="_blank" style="color: #1D9FB7;" href="mailto:a.m.johansson2@uva.nl">
-                    <i class="fas fa-envelope" style="margin-right: 5px; color: #1D9FB7;"></i>
-                    a.m.johansson2@uva.nl
+                <a href="mailto:a.m.johansson2@uva.nl">
+                    <i class="fas fa-envelope" style="margin-right:4px;"></i>a.m.johansson2@uva.nl
                 </a>
             </p>
-            <!-- EDIT: Social/academic icon links.
-                 Replace # with your real URLs when you have them.
-                 To remove a link, delete the whole <a> line. -->
             <div class="social-links">
                 <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
                 <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.uva.nl/en/profile/j/o/a.m.johansson/a.m.johansson.html" target="_blank" title="UvA Profile"><i class="fas fa-building-columns"></i></a>
             </div>
-
-            <!-- EDIT: Navigation links. Keep class="menu-item" on every link. -->
+            <hr class="sidebar-divider">
             <nav class="vertical-menu">
                 <a href="/index.html" class="menu-item">about me</a>
                 <a href="/views/projects.html" class="menu-item active">projects</a>
                 <a href="/views/publications.html" class="menu-item">publications</a>
-                <a href="/views/conferences.html" class="menu-item">conferences and workshops</a>
+                <a href="/views/conferences.html" class="menu-item">conferences</a>
                 <a href="/views/teaching.html" class="menu-item">teaching</a>
             </nav>
+            <p class="sidebar-copyright">© 2026 Annie Johansson</p>
         </div>
 
         <!-- ============================================================
-             RIGHT COLUMN – main content area
+             RIGHT COLUMN — projects overview
              ============================================================ -->
         <div class="right-column">
             <h1>projects.</h1>
 
             <!-- ============================================================
                  ACTIVE PROJECTS
-                 These are ongoing projects without a full project page yet.
-                 When a project is ready to publish, move it to the
-                 "completed projects" section below and add a "Read more →" link.
+                 Move to "completed projects" when ready and add "Read more →".
                  ============================================================ -->
-            <h2>ongoing projects</h2>
+            <h2>active projects.</h2>
 
-            <!-- Active Project: Error Types and Quitting -->
+            <!-- --------------------------------------------------------
+                 PROJECT ENTRY — copy this block to add a new project.
+                 EDIT: title, authors, tags, abstract, and link.
+                 -------------------------------------------------------- -->
             <div class="project-container">
-                <!-- EDIT: Project title -->
-                <h1>Diagnosing Erroneuous Learning Procedures</h1>
-                <!-- EDIT: Authors and year -->
-                <h2>2026</h2>
-                <!-- EDIT: Abstract text -->
+                <!-- EDIT: project title -->
+                <h1>Diagnosing Erroneous Learning Procedures</h1>
+                <!-- EDIT: authors and year -->
+                <h2>2026 — in preparation</h2>
+                <!-- EDIT: tags — short method/topic labels -->
+                <div class="project-tags">
+                    <span class="tag">error types</span>
+                    <span class="tag">quitting</span>
+                    <span class="tag">misconceptions</span>
+                    <span class="tag">motivation</span>
+                </div>
+                <!-- EDIT: short description or abstract -->
                 <p>
                     When students make errors, it may not always be because they genuinely do not know the
                     answer. Observed errors may reflect a heterogeneous mixture of cognitive (procedural mistakes,
-                    incorrect memory retrieval, or strategic behavior) and non-cognitive
-                    (inattention, demotivation, or disengagement) influences. And at the level of
-                    specific cognitive mechanisms, errors can result from one of several misconceptions --
-                    answering `18' to the multiplication item `9x9' can be the result of mistakenly adding the
-                    digits, inverting them, or simply incorrectly retrieving the answer to a different
-                    multiplication item.
+                    incorrect memory retrieval, or strategic behavior) and non-cognitive (inattention, demotivation,
+                    or disengagement) influences. And at the level of specific cognitive mechanisms, errors can
+                    result from one of several misconceptions — answering 18 to the multiplication item 9×9 can
+                    be the result of mistakenly adding the digits, inverting them, or simply incorrectly retrieving
+                    the answer to a different multiplication item.
 
                     Over several projects, we aim to disentangle these different types of errors and their
                     consequences for learning and motivation.
-
                 </p>
-                <!-- EDIT: Add a GitHub link when the repo is ready to share publicly -->
-                <p>
-                    <b>Interested in collaborating on this project? Get in touch with me!<b>
+                <!-- EDIT: add a GitHub or preprint link when the project is public -->
+                <p style="margin-top:10px;">
+                    <strong>Interested in collaborating on this project?
+                    <a href="mailto:a.m.johansson2@uva.nl">Get in touch.</a></strong>
                 </p>
             </div>
 
             <!-- ============================================================
                  COMPLETED PROJECTS
-                 Projects with a full page and/or published preprint.
                  ============================================================ -->
-            <h2>completed projects</h2>
+            <h2>completed projects.</h2>
 
-            <!-- Project 1: Three Strikes -->
             <div class="project-container">
-                <!-- EDIT: Project title -->
                 <h1>Three Strikes and Who is Out? Individual Differences in Error-Induced Quitting</h1>
-                <!-- EDIT: Authors and year -->
-                <h2>Annie M. Johansson, Alexander O. Savi, Han L. J. van der Maas, and Abe D. Hofman, 2025.</h2>
-                <!-- EDIT: Abstract text -->
+                <h2>Annie M. Johansson, Alexander O. Savi, Han L. J. van der Maas, and Abe D. Hofman · 2025</h2>
+                <div class="project-tags">
+                    <span class="tag">quitting</span>
+                    <span class="tag">motivation</span>
+                    <span class="tag">individual differences</span>
+                    <span class="tag">mixed-effects models</span>
+                </div>
                 <p>
-                    The biggest threat to learning is not engaging in it. Crucially, sequential errors have been found
-                    to be an important cause of quitting from educational practice. However, little is known about how
-                    students are differently affected by sequential errors. Using intensive longitudinal practicing data
-                    from over 200,000 primary-school students in a large-scale online learning environment, we confirm
-                    that sequential errors strongly increase the probability of quitting. We find large variability in
-                    this effect — ranging from no sensitivity to very high sensitivity to quitting following sequential
-                    errors — and show that individual differences are stable across two arithmetic practice domains.
-                    Our results corroborate the theoretical notion that students differ in their tolerance to failure
-                    and pinpoint a need to individualize how computer-adaptive systems intervene after errors.
+                    The biggest threat to learning is not engaging in it. Crucially, sequential errors have been
+                    found to be an important cause of quitting from educational practice. However, little is known
+                    about how students are differently affected by sequential errors. Using intensive longitudinal
+                    practicing data from over 200,000 primary-school students in a large-scale online learning
+                    environment, we confirm that sequential errors strongly increase the probability of quitting.
+                    We find large variability in this effect — ranging from no sensitivity to very high sensitivity
+                    to quitting following sequential errors — and show that individual differences are stable across
+                    two arithmetic practice domains. Our results corroborate the theoretical notion that students
+                    differ in their tolerance to failure and pinpoint a need to individualize how computer-adaptive
+                    systems intervene after errors.
                 </p>
-                <!-- EDIT: Link to the full project page (inside views/projects/) -->
-                <p><a class="read-more" href="/views/projects/three-strikes.html">Read more →</a></p>
+                <!-- EDIT: link to full project page -->
+                <a class="read-more" href="/views/projects/three-strikes.html">Read more →</a>
             </div>
 
-            <!-- Project 2: IRTree / Problem Skipping -->
             <div class="project-container">
-                <!-- EDIT: Project title -->
-                <h1>A Problem That Shouldn't Be Skipped: Problem Skipping Limits the Accuracy of Ability Estimates in
-                    Online Learning</h1>
-                <!-- EDIT: Authors and year -->
-                <h2>Annie M. Johansson, Alexander O. Savi, and Abe D. Hofman, 2025.</h2>
-                <!-- EDIT: Abstract text -->
+                <h1>A Problem That Shouldn't Be Skipped: Problem Skipping Limits the Accuracy of Ability Estimates in Online Learning</h1>
+                <h2>Annie M. Johansson, Alexander O. Savi, and Abe D. Hofman · 2025</h2>
+                <div class="project-tags">
+                    <span class="tag">psychometrics</span>
+                    <span class="tag">IRT</span>
+                    <span class="tag">problem-skipping</span>
+                    <span class="tag">metacognition</span>
+                </div>
                 <p>
                     The estimation of student ability is paramount in large-scale personalized learning.
-                    State-of-the-art
-                    adaptive learning environments use item response theory (IRT), but standard models assume that
-                    skipped problems are missing at random. Using data from a large-scale online learning platform,
-                    we apply the IRTree framework to model the decision to skip as a latent process separate from
-                    accuracy. We find that problem-skipping is non-ignorable: students who skipped more were more
-                    likely to make erroneous responses, yet skipping and accuracy are distinct traits. Ignoring
-                    problem-skipping leads to biased ability estimates, particularly for students who skip frequently.
-                    We discuss several ways to account for this process to ensure fair measurement in adaptive systems.
+                    State-of-the-art adaptive learning environments use item response theory (IRT), but standard
+                    models assume that skipped problems are missing at random. Using data from a large-scale online
+                    learning platform, we apply the IRTree framework to model the decision to skip as a latent
+                    process separate from accuracy. We find that problem-skipping is non-ignorable: students who
+                    skipped more were more likely to make erroneous responses, yet skipping and accuracy are
+                    distinct traits. Ignoring problem-skipping leads to biased ability estimates, particularly for
+                    students who skip frequently. We discuss several ways to account for this process to ensure
+                    fair measurement in adaptive systems.
                 </p>
-                <!-- EDIT: Link to the full project page (inside views/projects/) -->
-                <p><a class="read-more" href="/views/projects/irtree.html">Read more →</a></p>
+                <!-- EDIT: link to full project page -->
+                <a class="read-more" href="/views/projects/irtree.html">Read more →</a>
             </div>
 
-            <!-- --------------------------------------------------------
-                 ADD MORE PROJECTS HERE following the same pattern
-                 -------------------------------------------------------- -->
+            <!-- ADD NEW PROJECTS ABOVE THIS LINE — copy a project-container block -->
 
         </div>
     </div>

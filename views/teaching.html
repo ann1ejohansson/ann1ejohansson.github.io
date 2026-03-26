@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -13,21 +16,14 @@
 <body>
     <div class="container">
 
-        <!-- ============================================================
-             LEFT COLUMN – sidebar (same across all pages)
-             ============================================================ -->
         <div class="left-column">
             <img src="/images/profile.jpg" alt="Profile photo of Annie Johansson">
             <h1>Annie Johansson</h1>
-            <p>PhD Candidate <br> Optimizing Personalized Learning at Scale</p>
+            <p>PhD Candidate<br>Optimizing Personalized Learning at Scale</p>
+            <p>Department of Psychology<br>University of Amsterdam</p>
             <p>
-                Department of Psychology
-                <br>University of Amsterdam
-            </p>
-            <p>
-                <a target="_blank" style="color: #1D9FB7;" href="mailto:a.m.johansson2@uva.nl">
-                    <i class="fas fa-envelope" style="margin-right: 5px; color: #1D9FB7;"></i>
-                    a.m.johansson2@uva.nl
+                <a href="mailto:a.m.johansson2@uva.nl">
+                    <i class="fas fa-envelope" style="margin-right:4px;"></i>a.m.johansson2@uva.nl
                 </a>
             </p>
             <div class="social-links">
@@ -35,79 +31,67 @@
                 <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
                 <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.uva.nl/en/profile/j/o/a.m.johansson/a.m.johansson.html" target="_blank" title="UvA Profile"><i class="fas fa-building-columns"></i></a>
             </div>
-            <!-- EDIT: Navigation links. Keep class="menu-item" on every link. -->
+            <hr class="sidebar-divider">
             <nav class="vertical-menu">
                 <a href="/index.html" class="menu-item">about me</a>
                 <a href="/views/projects.html" class="menu-item">projects</a>
                 <a href="/views/publications.html" class="menu-item">publications</a>
-                <a href="/views/conferences.html" class="menu-item">conferences and workshops</a>
+                <a href="/views/conferences.html" class="menu-item">conferences</a>
                 <a href="/views/teaching.html" class="menu-item active">teaching</a>
             </nav>
+            <p class="sidebar-copyright">© 2026 Annie Johansson</p>
         </div>
 
-        <!-- ============================================================
-             RIGHT COLUMN – main content area
-             ============================================================ -->
         <div class="right-column">
             <h1>teaching.</h1>
 
             <!-- --------------------------------------------------------
-                 TEACHING ENTRY
-                 To add a new course: copy one full block below
-                 (from "project-container" to its closing </div>)
-                 and fill in your new course's details.
+                 TEACHING ENTRY — copy this block to add a new course.
+                 EDIT: title, role/institution/year, description, topics, links.
                  -------------------------------------------------------- -->
 
-            <!-- Course: BDS Toolbox – Data Visualization -->
             <div class="project-container">
-                <!-- EDIT: Course title -->
+                <!-- EDIT: course title -->
                 <h1>BDS Toolbox: Data Visualization</h1>
-                <!-- EDIT: Role, institution, and year(s) -->
-                <h2>Instructor – Behavioral Data Science Master's, University of Amsterdam, 2024-2025</h2>
+                <!-- EDIT: role, institution, year(s) -->
+                <h2>Instructor · Behavioral Data Science Master's, University of Amsterdam · 2025</h2>
                 <p>
-                    This module is part of the <em>BDS Toolbox</em>, a course within the
-                    <a target="_blank" href="https://www.uva.nl/en/programmes/masters/psychology-behavioural-data-science/behavioural-data-science.html">Behavioral Data Science Master's</a>
-                    programme at the University of Amsterdam. The module covers effective data
-                    visualization using R and ggplot2, interactive visualizations, and version control
-                    with Git and GitHub. 
+                    Part of the <em>BDS Toolbox</em> methods course in the Behavioral Data Science Master's
+                    programme. Students learn effective data visualization using R and ggplot2, build interactive
+                    visualizations, and collaborate using Git and GitHub — working with real data from large-scale
+                    educational platforms across two assignments.
                 </p>
-                <!-- Links – course site, GitHub repo, slides -->
-                <p>
+                <!-- EDIT: topics covered -->
+                <p style="margin-top:10px;"><strong>Topics covered:</strong></p>
+                <ul class="teaching-topics">
+                    <li>Principles of effective data visualization</li>
+                    <li>Static visualizations with ggplot2 (themes, color, facets, annotations)</li>
+                    <li>Interactive visualizations with plotly / ggplotly</li>
+                    <li>Collaborative workflows with Git and GitHub</li>
+                </ul>
+                <!-- EDIT: links — remove any that don't exist -->
+                <p style="margin-top:10px;">
                     <a target="_blank" href="https://ann1ejohansson.github.io/data-visualization-2025/">Course website</a>
                     &nbsp;·&nbsp;
                     <a target="_blank" href="https://ann1ejohansson.github.io/data-visualization-2025/slides/slides.html#/title-slide">Slides</a>
                     &nbsp;·&nbsp;
                     <a target="_blank" href="https://github.com/ann1ejohansson/data-visualization-2025">GitHub repository</a>
                 </p>
-
-                <!-- Topics list -->
-                <p style="margin-top: 10px;"><strong>Topics covered:</strong></p>
-                <ul class="teaching-topics">
-                    <li>Principles of effective data visualization</li>
-                    <li>Static visualizations with ggplot2 </li>
-                    <li>Interactive visualizations with plotly </li>
-                    <li>Collaborative workflows with Git and GitHub</li>
-                </ul>
             </div>
 
-            <!-- Course: Programming: The Next Step -->
             <div class="project-container">
-                <!-- EDIT: Course title -->
                 <h1>Programming: The Next Step</h1>
-                <!-- EDIT: Role, institution, and year(s) -->
-                <h2>Instructor – Research Master's in Psychology, University of Amsterdam, 2024</h2>
+                <h2>Instructor · Research Master's in Psychology, University of Amsterdam · 2024</h2>
                 <p>
                     A four-week intensive course in which students independently develop a software package
-                    from start to finish in either R or Python. The course emphasises <em>good</em> software
-                    — not just functional software — with a focus on package structure, documentation,
-                    vignettes, and unit testing. Each week students submit a pull request on GitHub and
-                    give peer feedback on their classmates' work, culminating in a live demonstration of
-                    the finished package.
+                    from start to finish in either R or Python. The course emphasises <em>good</em> software —
+                    not just functional software — with a focus on package structure, documentation, vignettes,
+                    and unit testing. Each week students submit a pull request on GitHub and give peer feedback,
+                    culminating in a live demonstration of their finished package.
                 </p>
-
-                <!-- EDIT: Topics list -->
-                <p style="margin-top: 10px;"><strong>Topics covered:</strong></p>
+                <p style="margin-top:10px;"><strong>Topics covered:</strong></p>
                 <ul class="teaching-topics">
                     <li>R and Python package development</li>
                     <li>Writing documentation and vignettes</li>
@@ -116,7 +100,7 @@
                 </ul>
             </div>
 
-            <!-- ADD MORE COURSES ABOVE THIS LINE following the same pattern -->
+            <!-- ADD NEW COURSES ABOVE THIS LINE -->
 
         </div>
     </div>

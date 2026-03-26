@@ -1,234 +1,403 @@
-/* General styles for the page */
+/* ============================================================
+   FONTS
+   Fraunces (serif) — headings and name
+   DM Sans (sans-serif) — body, nav, meta text
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap');
+
+/* ============================================================
+   DESIGN TOKENS
+   EDIT: Change colors here to update the whole site at once.
+   ============================================================ */
+:root {
+    --purple:       #473198;
+    --purple-light: rgba(71, 49, 152, 0.07);
+    --teal:         #1D9FB7;
+    --teal-dark:    #0B7B88;
+    --cream:        #F8F6F2;      /* page background */
+    --sidebar-bg:   #EFECEA;      /* left column background */
+    --text:         #2A2A2A;      /* main body text */
+    --text-light:   #777;         /* secondary text, meta, captions */
+    --border:       rgba(0,0,0,0.08);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'DM Sans', Helvetica, Arial, sans-serif;
     font-size: 14px;
-    font-weight: 350;
+    font-weight: 400;
+    color: var(--text);
+    background-color: var(--cream);
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 h1 {
-    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-weight: 300;
-    color: #473198;
+    color: var(--purple);
+    line-height: 1.2;
 }
 
-/* FIXED: was missing px unit — browser was silently ignoring font-size */
 h2 {
-    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 18px;
     font-weight: 300;
-    color: #473198;
+    color: var(--purple);
 }
 
-/* FIXED: was missing px unit and semicolon on color */
 h3 {
-    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+    font-family: 'DM Sans', Helvetica, Arial, sans-serif;
     font-size: 14px;
-    font-weight: 300;
-    color: dimgray;
+    font-weight: 400;
+    color: var(--text-light);
 }
 
+a {
+    color: var(--teal);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--teal-dark);
+    text-decoration: underline;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
 .container {
     display: flex;
     flex-direction: row;
-    padding: 20px;
-    max-width: 80%;
-    margin: auto;
-    /* FIXED: removed conflicting height: 75vh — min-height: 100vh is sufficient */
     min-height: 100vh;
+    max-width: 1020px;
+    margin: 0 auto;
 }
 
+/* ============================================================
+   LEFT COLUMN (sidebar)
+   Center-aligned. Fixed 280px width. Warm background.
+   EDIT: change width here if you want a wider/narrower sidebar.
+   ============================================================ */
 .left-column {
-    width: 30%;
+    width: 280px;
+    flex-shrink: 0;
+    background-color: var(--sidebar-bg);
+    text-align: center;
+    padding: 44px 24px 32px;
     position: sticky;
     top: 0;
-    /* FIXED: was overflow: hidden which clipped content if sidebar got long */
+    height: 100vh;
     overflow-y: auto;
-    flex: 1;
-    text-align: right;
-    border-right: 0.5px solid #ccc;
-    padding-right: 10px;
-    /* ADDED: breathing room above profile photo */
-    padding-top: 24px;
-    /* Prevent sidebar from overflowing viewport height */
-    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Profile photo — circular with a purple ring */
 .left-column img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 155px;
+    height: 155px;
     object-fit: cover;
-    margin-bottom: 5px;
+    outline: 3px solid var(--purple);
+    outline-offset: 3px;
+    margin-bottom: 18px;
 }
 
+/* Name */
 .left-column h1 {
-    font-size: 24px;
-    font-weight: 300;
-    margin: 10px 0;
-    color: #473198;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--purple);
+    margin: 0 0 6px;
+    line-height: 1.2;
 }
 
+/* Tagline, affiliation, email paragraphs */
 .left-column p {
-    margin: 10px 0;
+    font-size: 12px;
+    color: var(--text-light);
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+/* Email link */
+.left-column p a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.left-column p a:hover {
+    color: var(--purple);
+    text-decoration: none;
 }
 
 /* ============================================================
    SOCIAL ICONS ROW (sidebar)
-   Appears below the email link in every page's left column.
-   EDIT: adjust font-size to make icons bigger or smaller.
+   EDIT: adjust font-size to resize icons.
    ============================================================ */
 .social-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 14px;
-    margin: 8px 0 4px 0;
+    margin: 12px 0 4px;
 }
 
 .social-links a {
-    color: #473198;
-    font-size: 16px;
+    color: var(--text-light);
+    font-size: 15px;
     text-decoration: none;
     transition: color 0.2s, transform 0.2s;
 }
 
 .social-links a:hover {
-    color: #1D9FB7;
-    transform: scale(1.15);
+    color: var(--purple);
+    transform: scale(1.2);
+    text-decoration: none;
 }
 
 /* ============================================================
-   NAVIGATION MENU (sidebar)
+   SIDEBAR DIVIDER — thin rule between bio and nav
+   ============================================================ */
+.sidebar-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 18px 0 14px;
+}
+
+/* ============================================================
+   NAVIGATION
+   Left-aligned block, centered in the sidebar.
+   Active item: left border + purple + medium weight.
    ============================================================ */
 .vertical-menu {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-top: 20px;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 0;
 }
 
 .vertical-menu .menu-item {
-    text-align: right;
-    color: #473198;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--text-light);
     text-decoration: none;
-    font-size: 14px;
-    margin: 10px 0;
     padding: 5px 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    border-left: 2px solid transparent;
+    transition: color 0.18s, border-color 0.18s;
+    white-space: nowrap;
+    display: block;
 }
 
 .vertical-menu .menu-item:hover {
-    background-color: #473198;
-    color: white;
-    border-color: #473198;
-    transform: scale(0.95);
+    color: var(--purple);
+    border-left-color: var(--purple);
+    text-decoration: none;
 }
 
-/* ADDED: active state — marks the current page in the nav.
-   To use: add class="menu-item active" to the link for the current page. */
+/* EDIT: this class is added to the current page's nav link */
 .vertical-menu .menu-item.active {
-    background-color: #473198;
-    color: white;
-    border-color: #473198;
+    color: var(--purple);
+    font-weight: 500;
+    border-left-color: var(--purple);
+}
+
+/* Copyright line — pushed to the bottom of the sidebar */
+.sidebar-copyright {
+    margin-top: auto;
+    padding-top: 24px;
+    font-size: 11px;
+    color: var(--text-light);
+    opacity: 0.55;
 }
 
 /* ============================================================
    RIGHT COLUMN
-   EDIT: max-width caps line length on wide screens for readability.
+   EDIT: adjust padding for more/less breathing room.
    ============================================================ */
 .right-column {
-    flex: 2;
-    padding-left: 20px;
-    padding-top: 24px;
-    overflow-y: auto;
-    /* ADDED: prevents text lines from becoming too long on wide screens */
-    max-width: 680px;
+    flex: 1;
+    min-width: 0;
+    padding: 48px 52px 64px;
+    max-width: 700px;
+}
+
+/* Page-level heading (e.g. "projects.", "teaching.") */
+.right-column > h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--purple);
+    margin: 0 0 28px;
 }
 
 .right-column h2 {
-    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
     font-weight: 300;
-    color: #473198;
+    color: var(--purple);
 }
 
 .right-column p {
     font-size: 14px;
+    line-height: 1.7;
 }
 
-a {
-    color: #1D9FB7;
-    text-decoration: underline;
+/* ============================================================
+   COLLABORATE BOX (homepage only)
+   A tinted invitation block at the bottom of about me.
+   ============================================================ */
+.collaborate-box {
+    margin-top: 44px;
+    padding: 22px 26px;
+    background: var(--purple-light);
+    border-left: 3px solid var(--purple);
+    border-radius: 0 6px 6px 0;
 }
 
-a:hover {
-    color: #0B7B88;
+.collaborate-box h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--purple);
+    margin: 0 0 10px;
+}
+
+.collaborate-box p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+    margin: 0 0 14px;
+}
+
+/* Styled link inside the collaborate box */
+.collaborate-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--purple);
+    text-decoration: none;
+    border-bottom: 1px solid var(--purple);
+    padding-bottom: 1px;
+    margin-right: 16px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.collaborate-link:hover {
+    color: var(--teal);
+    border-color: var(--teal);
+    text-decoration: none;
 }
 
 /* ============================================================
    PROJECT OVERVIEW (views/projects.html)
    ============================================================ */
+
+/* Section headings: "active projects." / "completed projects." */
+.right-column > h2 {
+    font-size: 18px;
+    margin-top: 36px;
+    margin-bottom: 2px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Each project card — left purple accent border */
 .project-container {
-    margin-bottom: 40px;
-    padding: 10px;
+    border-left: 3px solid var(--purple);
+    padding-left: 14px;
+    margin-top: 22px;
+    margin-bottom: 32px;
 }
 
-/* CHANGED: was 14px grey — now 15px purple so titles are scannable */
+/* Project title inside a card */
 .project-container h1 {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: #473198;
-    margin-bottom: 0px;
-    line-height: 1.3;
-}
-
-.project-container h2 {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'DM Sans', Helvetica, Arial, sans-serif;
     font-size: 14px;
-    font-weight: 350;
-    color: #555;
-    margin-bottom: 10px;
-    margin-top: 4px;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0 0 2px;
+    line-height: 1.4;
 }
 
-/* CHANGED: line-height was 1.3 — bumped to 1.5 for comfortable reading */
+/* Authors / year line inside a card */
+.project-container h2 {
+    font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin: 0 0 6px;
+    border: none;
+    padding: 0;
+}
+
+/* Tag pills — small rounded labels for method/topic */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0 10px;
+}
+
+.tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--purple);
+    background: var(--purple-light);
+    padding: 2px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
+/* Abstract text inside a card */
 .project-container p {
-    font-family: Helvetica;
-    font-weight: 350;
     font-size: 13px;
-    line-height: 1.5;
-    margin-bottom: 0px;
-    color: #333333;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 0;
 }
 
 .project-container a {
-    color: #1D9FB7;
+    color: var(--teal);
     text-decoration: underline;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .project-container a:hover {
-    color: #0B7B88;
+    color: var(--teal-dark);
 }
 
-/* ADDED: "Read more →" link style — distinct from inline links */
+/* "Read more →" — nudges right on hover */
 .read-more {
     display: inline-block;
-    margin-top: 8px;
+    margin-top: 10px;
     font-size: 13px;
     font-weight: 500;
-    color: #473198;
+    color: var(--purple);
     text-decoration: none;
-    letter-spacing: 0.01em;
+    transition: transform 0.2s ease;
 }
 
 .read-more:hover {
-    color: #1D9FB7;
+    transform: translateX(4px);
+    color: var(--purple);
     text-decoration: none;
 }
 
@@ -236,55 +405,76 @@ a:hover {
    PROJECT DETAIL PAGES (views/projects/[name].html)
    ============================================================ */
 
+/* Back link at the top — small, uppercase, discrete */
+.back-link {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    text-decoration: none;
+    margin-bottom: 28px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--purple);
+    text-decoration: none;
+}
+
 .project-detail-title {
-    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 26px;
     font-weight: 300;
-    color: #473198;
-    margin-bottom: 4px;
+    color: var(--purple);
+    margin: 0 0 6px;
     line-height: 1.3;
 }
 
 .project-detail-meta {
     font-size: 13px;
-    color: #555;
-    margin-top: 0;
-    margin-bottom: 8px;
+    color: var(--text-light);
+    margin: 0 0 8px;
+    line-height: 1.5;
 }
 
 .project-detail-links {
     font-size: 13px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    line-height: 2;
 }
 
+/* Figure container */
 .project-detail-figure {
-    margin: 24px 0;
+    margin: 32px 0;
     text-align: center;
 }
 
-/* EDIT: max-width controls how wide the figure is on the page */
+/* EDIT: max-width controls how wide the figure appears */
 .project-detail-figure img {
-    max-width: 80%;
+    max-width: 78%;
     height: auto;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    padding: 8px;
+    padding: 10px;
+    background: white;
 }
 
 .figure-caption {
     font-size: 12px;
-    color: #666;
-    margin-top: 8px;
-    max-width: 80%;
+    color: var(--text-light);
+    margin-top: 10px;
+    max-width: 78%;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .project-detail-findings {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
     padding-left: 20px;
 }
 
@@ -293,88 +483,62 @@ a:hover {
 }
 
 /* ============================================================
-   PROJECTS PAGE – section dividers ("active projects." / "completed projects.")
-   ============================================================ */
-.right-column > h2 {
-    margin-top: 32px;
-    margin-bottom: 4px;
-    padding-bottom: 4px;
-    border-bottom: 0.5px solid #ccc;
-}
-
-/* ============================================================
    TEACHING PAGE (views/teaching.html)
+   Reuses .project-container for layout.
    ============================================================ */
 .teaching-topics {
     font-size: 13px;
-    color: #333333;
-    line-height: 1.5;
+    color: #444;
+    line-height: 1.6;
     padding-left: 20px;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 /* ============================================================
-   Mobile styles
+   MOBILE
    ============================================================ */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 
-    .right-column {
-        margin-top: 20px;
-        margin-bottom: 50px;
-        flex: none;
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-        height: auto;
-        padding-top: 0;
-    }
-
     .left-column {
-        flex: none;
-        text-align: center;
-        margin-bottom: 50px;
         width: 100%;
-        max-height: none;
-        overflow-y: visible;
-        border-right: 0.5px solid transparent;
-        border-bottom: 0.5px solid #ccc;
+        height: auto;
         position: relative;
-        padding-top: 16px;
+        padding: 32px 20px 20px;
+        border-bottom: 1px solid var(--border);
+        flex-shrink: unset;
+        overflow-y: visible;
     }
 
-    .vertical-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .right-column {
+        padding: 32px 20px 48px;
+        max-width: 100%;
     }
 
-    .vertical-menu .menu-item {
-        text-align: center;
+    .right-column > h1 {
+        font-size: 28px;
     }
 
-    .social-links {
-        justify-content: center;
-    }
-
-    h1 {
-        font-size: 16px;
-    }
-
-    h2, h3, p {
-        font-size: 14px;
-    }
-
-    img {
+    .left-column img {
         width: 120px;
         height: 120px;
     }
 
+    .left-column h1 {
+        font-size: 22px;
+    }
+
+    .sidebar-copyright {
+        padding-top: 14px;
+    }
+
+    .vertical-menu {
+        margin: 0 auto;
+    }
+
     a {
-        font-size: 14px;
-        display: inline-block;
+        display: inline;
     }
 }

@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <!-- EDIT: Change the title tag below to update the browser tab title -->
     <title>Annie Johansson</title>
 </head>
 
@@ -15,70 +17,89 @@
     <div class="container">
 
         <!-- ============================================================
-             LEFT COLUMN – sidebar with profile info and navigation
-             EDIT: Update name, title, affiliation, or email here.
-             Note: index.html uses relative paths (style.css, images/...)
-             All other pages in views/ use absolute paths (/style.css, /images/...)
+             LEFT COLUMN — sidebar
+             EDIT: update name, tagline, affiliation, or email here.
+             This block is the same on every page — update all pages
+             if you change anything here.
+             Note: index.html uses relative paths; views/ pages use /absolute paths.
              ============================================================ -->
         <div class="left-column">
             <img src="images/profile.jpg" alt="Profile photo of Annie Johansson">
             <h1>Annie Johansson</h1>
-            <!-- EDIT: Your title / research tagline -->
-            <p>PhD Candidate <br> Optimizing Personalized Learning at Scale</p>
-            <!-- EDIT: Your department and institution -->
+            <!-- EDIT: your tagline -->
+            <p>PhD Candidate<br>Optimizing Personalized Learning at Scale</p>
+            <!-- EDIT: your department and institution -->
+            <p>Department of Psychology<br>University of Amsterdam</p>
+            <!-- EDIT: your email -->
             <p>
-                Department of Psychology
-                <br>University of Amsterdam
-            </p>
-            <!-- EDIT: Your email address (appears in two places below) -->
-            <p>
-                <a target="_blank" style="color: #1D9FB7;" href="mailto:a.m.johansson2@uva.nl">
-                    <i class="fas fa-envelope" style="margin-right: 5px; color: #1D9FB7;"></i>
-                    a.m.johansson2@uva.nl
+                <a href="mailto:a.m.johansson2@uva.nl">
+                    <i class="fas fa-envelope" style="margin-right:4px;"></i>a.m.johansson2@uva.nl
                 </a>
             </p>
-            <!-- EDIT: Social/academic icon links.
-                 Replace # with your real URLs when you have them.
-                 To remove a link, delete the whole <a> line.
-                 Icons come from Font Awesome (already loaded above). -->
+
+            <!-- EDIT: social/academic links — replace # with your real URLs -->
             <div class="social-links">
                 <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
                 <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.uva.nl/en/profile/j/o/a.m.johansson/a.m.johansson.html" target="_blank" title="UvA Profile"><i class="fas fa-building-columns"></i></a>
             </div>
 
-            <!-- EDIT: Navigation links. Keep class="menu-item" on every link. -->
+            <hr class="sidebar-divider">
+
+            <!-- EDIT: navigation — add class="menu-item active" to the current page -->
             <nav class="vertical-menu">
                 <a href="index.html" class="menu-item active">about me</a>
                 <a href="views/projects.html" class="menu-item">projects</a>
                 <a href="views/publications.html" class="menu-item">publications</a>
-                <a href="views/conferences.html" class="menu-item">conferences and workshops</a>
+                <a href="views/conferences.html" class="menu-item">conferences</a>
                 <a href="views/teaching.html" class="menu-item">teaching</a>
             </nav>
+
+            <p class="sidebar-copyright">© 2026 Annie Johansson</p>
         </div>
 
         <!-- ============================================================
-             RIGHT COLUMN – main content area
-             EDIT: Update the "about me" text below.
+             RIGHT COLUMN — main content
+             EDIT: update the bio text and collaborate section below.
              ============================================================ -->
         <div class="right-column">
             <h1>about me.</h1>
-            <!-- EDIT: Your bio / about me paragraph(s) -->
+
+            <!-- EDIT: bio paragraph(s) -->
             <p>
-                I am a PhD student working at the <a target="_blank" href="http://www.edaptiv.org">EdAptiv Lab</a> at
-                the University of Amsterdam.
-                In my work, I use data from a large-scale online learning platform to understand what motivates, and
-                demotivates, children to learn.
-                Why do some children fail, and some succeed? I use these findings to optimize learning systems such that
-                every learner has a fair opportunity to succeed.
+                I am a PhD student working at the <a target="_blank" href="http://www.edaptiv.org">EdAptiv Lab</a>
+                at the University of Amsterdam. In my work, I use data from a large-scale online learning platform
+                to understand what motivates — and demotivates — children to learn. Why do some children fail, and
+                some succeed? I use these findings to optimize learning systems such that every learner has a fair
+                opportunity to succeed.
             </p>
-            <p><a href="views/readmore.html">Read more about the goals of my PhD project.</a></p>
             <p>
-                <br>Please explore my webpage to learn more about my
-                <a href="views/projects.html">current work</a> and
-                <a href="views/publications.html">publications</a>.
+                <a href="views/readmore.html">Read more about my PhD project →</a>
             </p>
+            <p>
+                Explore my <a href="views/projects.html">projects</a> and
+                <a href="views/publications.html">publications</a> to learn more about my work.
+            </p>
+
+            <!-- --------------------------------------------------------
+                 COLLABORATE BOX
+                 EDIT: update the invitation text or contact details.
+                 -------------------------------------------------------- -->
+            <div class="collaborate-box">
+                <h2>Interested in collaborating?</h2>
+                <p>
+                    I'm always open to discussing research on learning, motivation, and psychometrics —
+                    whether you're a researcher, educator, or ed-tech developer. Feel free to reach out.
+                </p>
+                <a class="collaborate-link" href="mailto:a.m.johansson2@uva.nl">
+                    → a.m.johansson2@uva.nl
+                </a>
+                <a class="collaborate-link" href="https://www.uva.nl/en/profile/j/o/a.m.johansson/a.m.johansson.html" target="_blank">
+                    → UvA profile page
+                </a>
+            </div>
         </div>
 
     </div>

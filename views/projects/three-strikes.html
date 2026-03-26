@@ -4,134 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <!-- EDIT: Update the title to match the project name -->
     <title>Three Strikes – Annie Johansson</title>
 </head>
 
 <body>
     <div class="container">
 
-        <!-- ============================================================
-             LEFT COLUMN – sidebar (same across all pages)
-             EDIT: Update name, title, affiliation, or email here.
-             ============================================================ -->
         <div class="left-column">
             <img src="/images/profile.jpg" alt="Profile photo of Annie Johansson">
             <h1>Annie Johansson</h1>
-            <p>PhD Candidate <br> Optimizing Personalized Learning at Scale</p>
+            <p>PhD Candidate<br>Optimizing Personalized Learning at Scale</p>
+            <p>Department of Psychology<br>University of Amsterdam</p>
             <p>
-                Department of Psychology
-                <br>University of Amsterdam
-            </p>
-            <p>
-                <a target="_blank" style="color: #1D9FB7;" href="mailto:a.m.johansson2@uva.nl">
-                    <i class="fas fa-envelope" style="margin-right: 5px; color: #1D9FB7;"></i>
-                    a.m.johansson2@uva.nl
+                <a href="mailto:a.m.johansson2@uva.nl">
+                    <i class="fas fa-envelope" style="margin-right:4px;"></i>a.m.johansson2@uva.nl
                 </a>
             </p>
-            <!-- EDIT: Social/academic icon links. Replace # with real URLs. -->
             <div class="social-links">
                 <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
                 <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.uva.nl/en/profile/j/o/a.m.johansson/a.m.johansson.html" target="_blank" title="UvA Profile"><i class="fas fa-building-columns"></i></a>
             </div>
+            <hr class="sidebar-divider">
             <nav class="vertical-menu">
                 <a href="/index.html" class="menu-item">about me</a>
                 <a href="/views/projects.html" class="menu-item active">projects</a>
                 <a href="/views/publications.html" class="menu-item">publications</a>
-                <a href="/views/conferences.html" class="menu-item">conferences and workshops</a>
+                <a href="/views/conferences.html" class="menu-item">conferences</a>
                 <a href="/views/teaching.html" class="menu-item">teaching</a>
             </nav>
+            <p class="sidebar-copyright">© 2026 Annie Johansson</p>
         </div>
 
-        <!-- ============================================================
-             RIGHT COLUMN – full project page content
-             ============================================================ -->
         <div class="right-column">
-
-            <!-- Back link -->
-            <p><a href="/views/projects.html">← back to projects</a></p>
+            <a class="back-link" href="/views/projects.html">← projects</a>
 
             <!-- --------------------------------------------------------
                  PROJECT HEADER
+                 EDIT: title, authors, venue, year
                  -------------------------------------------------------- -->
-            <h1 class="project-detail-title">Three Strikes and Who is Out? Individual Differences in Error-Induced
-                Quitting</h1>
+            <h1 class="project-detail-title">Three Strikes and Who is Out? Individual Differences in Error-Induced Quitting</h1>
             <p class="project-detail-meta">
                 Annie M. Johansson, Alexander O. Savi, Han L. J. van der Maas, and Abe D. Hofman
                 <br>
-                <!-- EDIT: Update venue and year when published -->
+                <!-- EDIT: update venue and status -->
                 <em>In review.</em>
             </p>
 
             <!-- --------------------------------------------------------
-                 LINKS – preprint, GitHub repo, code, data
+                 LINKS
+                 EDIT: update hrefs. Remove lines that don't apply.
                  -------------------------------------------------------- -->
             <p class="project-detail-links">
                 <a target="_blank" href="/files/three-strikes-preprint.pdf">Preprint (PDF)</a>
                 &nbsp;·&nbsp;
-                <a target="_blank" href="https://github.com/ann1ejohansson/three-strikes">GitHub Repository</a>
+                <a target="_blank" href="https://github.com/ann1ejohansson/three-strikes">GitHub repository</a>
                 &nbsp;·&nbsp;
                 <a target="_blank" href="https://osf.io/preprints/psyarxiv/6tduv">PsyArXiv</a>
             </p>
 
             <!-- --------------------------------------------------------
                  ABSTRACT
+                 EDIT: paste updated abstract here
                  -------------------------------------------------------- -->
             <h2>Abstract</h2>
             <p>
                 No matter how well a learning system is designed, it becomes irrelevant when students quit. Once
-                learners disengage,
-                learning ceases. Crucially, we show that sequential errors are an important cause of quitting from
-                learning. Little is
-                known about how students differ in their sensitivity to errors. Using intensive longitudinal practicing
-                data from over
-                200,000 primary-school students in a large-scale online learning environment, we show that sequential
-                errors
-                strongly increase the probability of quitting from learning. Importantly, we find large variability in
-                this effect,
+                learners disengage, learning ceases. Crucially, we show that sequential errors are an important
+                cause of quitting from learning. Little is known about how students differ in their sensitivity to
+                errors. Using intensive longitudinal practicing data from over 200,000 primary-school students in a
+                large-scale online learning environment, we show that sequential errors strongly increase the
+                probability of quitting from learning. Importantly, we find large variability in this effect,
                 ranging from no or small tendencies to quit to high sensitivities to quitting following sequential
-                errors. We also found
-                interaction effects involving age, difficulty level, time of day, and response times. We validate these
-                results in an
-                independent dataset and show that individual differences are stable across two arithmetic practice
-                domains. Our results
-                show that students differ in their tolerance to failure, and we discuss how to deal with these
-                individual differences.
+                errors. We also found interaction effects involving age, difficulty level, time of day, and response
+                times. We validate these results in an independent dataset and show that individual differences are
+                stable across two arithmetic practice domains. Our results show that students differ in their
+                tolerance to failure, and we discuss how to deal with these individual differences.
             </p>
 
             <!-- --------------------------------------------------------
                  MAIN FIGURE
-                 The figure lives in /images/projects/
+                 EDIT: replace src, alt text, and caption.
+                 Figure files live in /images/projects/
                  -------------------------------------------------------- -->
             <div class="project-detail-figure">
                 <img src="/images/projects/three-strikes-figure-1.pdf"
-                    alt="Distribution of individual random effects of sequential errors on quitting, showing wide variability across students">
+                     alt="Baseline quitting rates and effects of sequential errors on quitting for 300 randomly sampled users, with scatterplots showing the correlation between random effects in addition and subtraction">
                 <p class="figure-caption">
-                    <strong>Figure.</strong> Left: Baseline quitting rates (intercept) and effects of sequential errors
-                    on quitting (slope)
-                    for 300 randomly sampled users, across both the addition and subtraction domain. Datapoints are
-                    ordered from lowest to
-                    highest effect estimate in both graphs. Horizontal lines denote the fixed effect. Vertical lines
-                    represent the 95\%
-                    confidence interval of each user's effect, estimated from repeated resampling (n = 200) from the
-                    posterior distribution
-                    of the random effects. The \textit{REsim} function from the package merTools (v. 0.6.2;
-                    \textcite{knowles2016package})
-                    in R was used to achieve this. The points of users whose effect estimate is not significantly
-                    different from the average
-                    main effect has a more transparent color. Right: Scatterplots representing the correlation between
-                    random effects in the
-                    addition and subtraction game. The shaded region represents the 95\% confidence interval.
+                    <strong>Figure.</strong> Left: Baseline quitting rates (intercept) and effects of sequential
+                    errors on quitting (slope) for 300 randomly sampled users, across both the addition and
+                    subtraction domain. Data points are ordered from lowest to highest effect estimate. Horizontal
+                    lines denote the fixed effect; vertical lines represent the 95% confidence interval of each
+                    user's effect. Points whose estimate is not significantly different from the average main
+                    effect are shown with reduced opacity. Right: Scatterplots representing the correlation
+                    between random effects in the addition and subtraction game. The shaded region represents
+                    the 95% confidence interval.
                 </p>
             </div>
 
             <!-- --------------------------------------------------------
                  KEY FINDINGS
+                 EDIT: update bullets with your findings (aim for 3–5)
                  -------------------------------------------------------- -->
             <h2>Key Findings</h2>
             <ul class="project-detail-findings">
@@ -140,43 +121,38 @@
                     is one of the strongest predictors of a student stopping their practice session — a finding
                     that holds across over 200,000 students.
                 </li>
-
                 <li>
                     <strong>The effect of errors on quitting differs across contextual and individual factors.</strong>
-                    Specifically age,
-                    difficulty level, time of day, and response times. Importantly, these individual differences were
-                    found to be stable
-                    across two arithmetic practice domains, suggesting they reflect consistent personal traits rather
-                    than situational
-                    fluctuations.
+                    Specifically age, difficulty level, time of day, and response times moderate the effect.
+                    Importantly, these individual differences were found to be stable across two arithmetic practice
+                    domains, suggesting they reflect consistent personal traits rather than situational fluctuations.
                 </li>
-
                 <li>
                     <strong>Individual differences are large.</strong> On top of group-level differences, students
-                    differ dramatically in how sensitive they are to sequential
-                    errors on an individal level. Some show little to no tendency to quit after mistakes, while others
-                    are highly likely to quit following them.
+                    differ dramatically in how sensitive they are to sequential errors on an individual level.
+                    Some show little to no tendency to quit after mistakes, while others are highly likely to quit
+                    following them.
                 </li>
-
                 <li>
-                    <strong>Differences are stable across domains.</strong> A student's sensitivity to error-induced
-                    quitting in addition practice predicts the same sensitivity in subtraction — showing this is
-                    a stable individual characteristic, not noise.
+                    <strong>Differences are stable across domains.</strong> A student's sensitivity to
+                    error-induced quitting in addition practice predicts the same sensitivity in subtraction —
+                    showing this is a stable individual characteristic, not noise.
                 </li>
             </ul>
 
             <!-- --------------------------------------------------------
-                 METHODOLOGY 
+                 METHODS
+                 EDIT: update or remove this section
                  -------------------------------------------------------- -->
             <h2>Data &amp; Methods</h2>
             <p>
-                We analyze longitudinal practice data from <a target="_blank" href="http://www.prowise.com/learn">Prowise Learn</a>,
-                a large-scale adaptive online learning platform used by primary school students across the Netherlands.
-                Our dataset contains responses from over 200,000 students practicing arithmetic. First, we estimated dynamic transition
-                probabilities between persisting and quitting states using a Markov model.
-                Then we use mixed-effects
-                models to estimate a student-level random effect of sequential errors on quitting.
-                Findings are validated in an independent dataset.
+                We analyze longitudinal practice data from
+                <a target="_blank" href="http://www.prowise.com/learn">Prowise Learn</a>,
+                a large-scale adaptive online learning platform used by primary school students across the
+                Netherlands. Our dataset contains responses from over 200,000 students practicing arithmetic.
+                First, we estimated dynamic transition probabilities between persisting and quitting states using
+                a Markov model. Then we use mixed-effects models to estimate a student-level random effect of
+                sequential errors on quitting. Findings are validated in an independent dataset.
             </p>
 
         </div>

@@ -16,6 +16,20 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`. No build step required; changes are visible immediately on reload. Deployment is automatic: pushing to `main` publishes to GitHub Pages.
 
+## Design system
+
+**Fonts:** Fraunces (serif, Google Fonts) for the name and page headings; DM Sans (sans-serif, Google Fonts) for body, nav, and meta text. Loaded via `@import` in `style.css` — no extra `<link>` tags needed in HTML (the font link tags in `<head>` are the preconnect hints only).
+
+**Colors** (defined as CSS variables at the top of `style.css` — edit once, applies everywhere):
+- `--purple: #473198` — primary accent, headings, active nav, borders
+- `--cream: #F8F6F2` — page background
+- `--sidebar-bg: #EFECEA` — left column background
+- `--teal: #1D9FB7` — links
+- `--text: #2A2A2A` — body text
+- `--text-light: #777` — secondary text, meta, captions
+
+**Key CSS classes:** `.project-container` (project/course card with left purple border), `.project-tags` + `.tag` (pill labels), `.collaborate-box` (homepage invite section), `.back-link` (small uppercase back navigation), `.read-more` (animated arrow link), `.sidebar-divider` (hr between bio and nav), `.sidebar-copyright` (pinned to sidebar bottom).
+
 ## Architecture
 
 ```
