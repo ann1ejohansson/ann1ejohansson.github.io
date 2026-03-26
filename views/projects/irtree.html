@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- EDIT: Update the title to match the project name -->
+    <title>IRTree – Annie Johansson</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ============================================================
+             LEFT COLUMN – sidebar (same across all pages)
+             EDIT: Update name, title, affiliation, or email here.
+             ============================================================ -->
+        <div class="left-column">
+            <img src="/images/profile.jpg" alt="Profile photo of Annie Johansson">
+            <h1>Annie Johansson</h1>
+            <p>PhD Candidate <br> Optimizing Personalized Learning at Scale</p>
+            <p>
+                Department of Psychology
+                <br>University of Amsterdam
+            </p>
+            <p>
+                <a target="_blank" style="color: #1D9FB7;" href="mailto:a.m.johansson2@uva.nl">
+                    <i class="fas fa-envelope" style="margin-right: 5px; color: #1D9FB7;"></i>
+                    a.m.johansson2@uva.nl
+                </a>
+            </p>
+            <!-- EDIT: Social/academic icon links. Replace # with real URLs. -->
+            <div class="social-links">
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <nav class="vertical-menu">
+                <a href="/index.html" class="menu-item">about me</a>
+                <a href="/views/projects.html" class="menu-item active">projects</a>
+                <a href="/views/publications.html" class="menu-item">publications</a>
+                <a href="/views/conferences.html" class="menu-item">conferences and workshops</a>
+                <a href="/views/teaching.html" class="menu-item">teaching</a>
+            </nav>
+        </div>
+
+        <!-- ============================================================
+             RIGHT COLUMN – full project page content
+             ============================================================ -->
+        <div class="right-column">
+
+            <!-- Back link -->
+            <p><a href="/views/projects.html">← back to projects</a></p>
+
+            <!-- --------------------------------------------------------
+                 PROJECT HEADER
+                 EDIT: Update title, authors, venue, and year below.
+                 -------------------------------------------------------- -->
+            <h1 class="project-detail-title">A Problem That Shouldn't Be Skipped: Problem Skipping Limits the Accuracy of Ability Estimates in Online Learning</h1>
+            <p class="project-detail-meta">
+                Annie M. Johansson, Alexander O. Savi, and Abe D. Hofman
+                <br>
+                <!-- EDIT: Update venue and year when published/accepted -->
+                <em>In review.</em>
+            </p>
+
+            <!-- --------------------------------------------------------
+                 LINKS – preprint, GitHub repo, poster, slides
+                 EDIT: Update or add href links below.
+                 Remove any <a> tags for links that don't exist yet.
+                 -------------------------------------------------------- -->
+            <p class="project-detail-links">
+                <a target="_blank" href="/files/preprint-2025.pdf">Preprint (PDF)</a>
+                &nbsp;·&nbsp;
+                <a target="_blank" href="https://github.com/ann1ejohansson/irtree">GitHub Repository</a>
+                &nbsp;·&nbsp;
+                <a target="_blank" href="/files/2024-iops-poster.pdf">Poster (IOPS 2024)</a>
+            </p>
+
+            <!-- --------------------------------------------------------
+                 ABSTRACT
+                 EDIT: Paste or update the abstract text below.
+                 -------------------------------------------------------- -->
+            <h2>Abstract</h2>
+            <p>
+                The estimation of student ability is paramount in large-scale personalized learning. To this end,
+                state-of-the-art adaptive learning environments use item response theory (IRT). Previous work in
+                traditional learning assessment has demonstrated that unidimensional IRT models fall short in
+                adequately estimating ability when items on a test are skipped. In this study, we extend this work
+                to online learning platforms. We analyze data from a large-scale online learning platform used to
+                practice Arithmetic. Using the IRTree framework, we compare the unidimensional model of accuracy to
+                a multidimensional model which additionally accounts for the decision to respond or skip a problem.
+                We found support for problem-skipping as a non-ignorable process: students that were more likely to
+                problem-skip were more likely to make erroneous responses. Further exploration revealed individual
+                differences in the strategies involved with problem-skipping. To ensure that learning analytic tools
+                are supported by fair measurement models, we suggest several ways to account for problem-skipping
+                when estimating student ability.
+            </p>
+
+            <!-- --------------------------------------------------------
+                 MAIN FIGURE
+                 EDIT: Replace the src with the path to your figure.
+                 Replace the alt text with a description of the figure.
+                 Replace the caption below the image.
+                 The figure lives in /images/projects/
+                 -------------------------------------------------------- -->
+            <div class="project-detail-figure">
+                <img src="/images/projects/irtree-figure-1.pdf"
+                     alt="IRTree model diagram showing two decision nodes: Y1 models the skip/respond decision, Y2 models the correct/incorrect outcome">
+                <p class="figure-caption">
+                    <strong>Figure.</strong> The IRTree model used in this study. Node Y<sub>1</sub> captures the
+                    student's decision to skip a problem (outcome: 1 = skip) or attempt it (continue to Y<sub>2</sub>).
+                    Node Y<sub>2</sub> captures the accuracy of the response (1 = correct, 0 = incorrect).
+                    Each node has its own latent trait, allowing problem-skipping and accuracy to be modeled
+                    as distinct processes.
+                </p>
+                <img src="/images/projects/irtree-figure-2.pdf"
+                     alt="IRTree model diagram showing two decision nodes: Y1 models the skip/respond decision, Y2 models the correct/incorrect outcome">
+                <p class="figure-caption">
+                    <strong>Figure.</strong> The IRTree model used in this study. Node Y<sub>1</sub> captures the
+                    student's decision to skip a problem (outcome: 1 = skip) or attempt it (continue to Y<sub>2</sub>).
+                    Node Y<sub>2</sub> captures the accuracy of the response (1 = correct, 0 = incorrect).
+                    Each node has its own latent trait, allowing problem-skipping and accuracy to be modeled
+                    as distinct processes.
+                </p>
+            </div>
+
+            <!-- --------------------------------------------------------
+                 KEY FINDINGS
+                 EDIT: Update the bullet points below with your findings.
+                 Aim for 3–5 concise, plain-language points.
+                 -------------------------------------------------------- -->
+            <h2>Key Findings</h2>
+            <ul class="project-detail-findings">
+                <li>
+                    <strong>Problem-skipping and accuracy are distinguishable latent traits.</strong> The fully estimated IRTree model —
+                    which allows skip propensity and accuracy to be measured as separate dimensions — outperformed the unidimensional
+                    baseline on both in-sample fit (AIC/BIC) and out-of-sample prediction (k-fold cross-validation RMSE). This confirms that
+                    treating skipped responses as simply a proxy for low ability is incorrect, and that non-responding carries information
+                    beyond what a standard IRT model captures.
+                </li>
+                <li>
+                    <strong>Skip propensity and accuracy are moderately, not perfectly, correlated.</strong> At the student level, the
+                    correlation between propensity to skip (Node 1) and propensity to answer incorrectly (Node 2) was r = 0.41 — positive,
+                    but far from the perfect correlation assumed by unidimensional models. At the item level, the correlation between item
+                    skipping threshold and item difficulty was higher (r = 0.77), meaning difficulty is a stronger driver of skipping at the
+                    item level than at the individual level. The gap between these two correlations is itself meaningful: students' skip
+                    tendencies are shaped by individual differences in metacognitive regulation and motivation that go well beyond item
+                    difficulty.
+                </li>
+                <li>
+                    <strong>Individual differences in skipping strategies.</strong> Examining individual response sequences revealed
+                    students who skipped frequently yet responded correctly at high rates. Their sequences often showed long runs of rapid
+                    skips followed by bursts of correct answers — a pattern more consistent with strategic effort avoidance than with low
+                    proficiency. This directly challenges the unidimensional model's core assumption and suggests that some students use the
+                    skip option as a self-regulation strategy rather than as a signal of not knowing the answer.
+                </li>
+            </ul>
+
+            <!-- --------------------------------------------------------
+                 METHODOLOGY NOTE (optional)
+                 EDIT: Remove this section if not needed, or update it.
+                 -------------------------------------------------------- -->
+            <h2>Data &amp; Methods</h2>
+            <p>
+                We analyze data from the Series game in <a target="_blank" href="http://www.prowise.com/learn">Prowise Learn</a>
+                (formerly Math Garden), a computer-adaptive arithmetic practice platform. The dataset contains
+                responses from 3,795 students across 386 items, in which students can choose to skip a problem
+                by pressing a dedicated skip button. We fit a two-node IRTree model using Stan, and compare it
+                to a standard unidimensional 1PL IRT model using posterior predictive checks and model fit indices.
+                Code and materials are available on the
+                <a target="_blank" href="https://github.com/ann1ejohansson/irtree">GitHub repository</a>.
+            </p>
+            <img src="/images/projects/irtree-figure-3.png"
+                     alt="IRTree model diagram showing two decision nodes: Y1 models the skip/respond decision, Y2 models the correct/incorrect outcome">
+                <p class="figure-caption">
+                    <strong>Figure.</strong> The IRTree model used in this study. Node Y<sub>1</sub> captures the
+                    student's decision to skip a problem (outcome: 1 = skip) or attempt it (continue to Y<sub>2</sub>).
+                    Node Y<sub>2</sub> captures the accuracy of the response (1 = correct, 0 = incorrect).
+                    Each node has its own latent trait, allowing problem-skipping and accuracy to be modeled
+                    as distinct processes.
+                </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

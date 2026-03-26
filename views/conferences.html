@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="/style.css" rel="stylesheet">
-    <title>Annie Johansson</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- EDIT: Change the title tag below to update the browser tab title -->
+    <title>Conferences – Annie Johansson</title>
 </head>
 
 <body>
     <div class="container">
-        <!-- Left Column -->
+
+        <!-- ============================================================
+             LEFT COLUMN – sidebar (same across all pages)
+             EDIT: Update name, title, affiliation, or email here.
+             ============================================================ -->
         <div class="left-column">
-            <img src="/images/profile.jpg" alt="Profile">
+            <img src="/images/profile.jpg" alt="Profile photo of Annie Johansson">
             <h1>Annie Johansson</h1>
             <p>PhD Candidate <br> Optimizing Personalized Learning at Scale</p>
             <p>
@@ -26,32 +32,70 @@
                     a.m.johansson2@uva.nl
                 </a>
             </p>
+            <!-- EDIT: Social/academic icon links. Replace # with real URLs. -->
+            <div class="social-links">
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <!-- EDIT: Navigation links. Keep class="menu-item" on every link. -->
             <nav class="vertical-menu">
                 <a href="/index.html" class="menu-item">about me</a>
                 <a href="/views/projects.html" class="menu-item">projects</a>
                 <a href="/views/publications.html" class="menu-item">publications</a>
-                <a href="conferences.html" class="menu-item">conferences and workshops</a>
+                <a href="/views/conferences.html" class="menu-item active">conferences and workshops</a>
+                <a href="/views/teaching.html" class="menu-item">teaching</a>
             </nav>
         </div>
 
+        <!-- ============================================================
+             RIGHT COLUMN – main content area
+             ============================================================ -->
         <div class="right-column">
-            <h1>conferences.</h1>
+            <h1>conferences and workshops.</h1>
 
+            <!-- --------------------------------------------------------
+                 CONFERENCE / WORKSHOP ENTRIES
+                 To add a new entry: copy one <li>...</li> block and
+                 fill in the details. Use <strong> for the event name,
+                 <em> for the paper/talk title, and <a> for any links.
+                 -------------------------------------------------------- -->
             <ul>
-                <li><strong>IMPS 2024.</strong> Symposium presentation: "Applications
-                    of Online Learning Systems: Modeling Individual Differences in Error-Induced Quitting". 
-                    <a href="/files/IMPS_2024_Thursday_RB210_Johansson.pdf">Slides</a>
-                 </li>
 
-                 <li><strong>Jacob's Foundation Workshop: Leveraging Educational Games to Study Motivation.</strong> 
-                    Part of the organizing team of a 2-day workshop held at the University of Amsterdam, gathering motivation- and 
-                    ed-tech experts to explore the question "Can we use big educational game data to study motivation?". 
+                 <li>
+                    <strong>LAK25 – Learning Analytics and Knowledge Conference, 2025.</strong>
+                    Workshop presentation: "Can We Use Big Educational Game Data to Study Motivation?"
+                    <!-- EDIT: Link to the irtree project page or poster -->
+                    <a target="_blank" href="/views/projects/irtree.html">Project page</a>
                 </li>
-                <li><strong>IOPS Winter Conference 2024.</strong>  Poster presentation: Problem-Skipping Limits the Accuracy of Ability Estimates in Online Learning.
-                    <a href="https://ann1ejohansson.github.io/qm-trees/">Poster & References</a>
+
+                <li>
+                    <strong>IOPS Winter Conference 2024.</strong>
+                    Poster presentation: "Problem-Skipping Limits the Accuracy of Ability Estimates in Online Learning."
+                    <!-- EDIT: This now links to the irtree GitHub repo (previously linked to qm-trees) -->
+                    <a target="_blank" href="https://github.com/ann1ejohansson/irtree">GitHub repository</a>
+                    &nbsp;·&nbsp;
+                    <a target="_blank" href="/files/2024-iops-poster.pdf">Poster (PDF)</a>
                 </li>
+
+                <li>
+                    <strong>Jacob's Foundation: Leveraging Educational Games to Study Motivation.</strong>
+                    Part of the organizing team of a 2-day workshop held at the University of Amsterdam,
+                    gathering motivation and ed-tech experts to explore the question "Can we use big
+                    educational game data to study motivation?".
+                </li>
+
+                <li>
+                    <strong>IMPS 2024.</strong>
+                    Symposium presentation: "Applications of Online Learning Systems: Modeling Individual
+                    Differences in Error-Induced Quitting."
+                    <!-- EDIT: Link to slides PDF in /files/ -->
+                    <a target="_blank" href="/files/IMPS_2024_Thursday_RB210_Johansson.pdf">Slides</a>
+                </li>
+
             </ul>
-        
         </div>
     </div>
 </body>

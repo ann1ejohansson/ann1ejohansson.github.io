@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="/style.css" rel="stylesheet">
-    <title>Projects</title>
-
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <!-- EDIT: Change the title tag below to update the browser tab title -->
+    <title>Projects – Annie Johansson</title>
 </head>
+
 <body>
     <div class="container">
-        <!-- Left Column -->
+
+        <!-- ============================================================
+             LEFT COLUMN – sidebar with profile info and navigation
+             EDIT: Update name, title, affiliation, or email here.
+             This block is the same across all pages — update all pages
+             if you change anything here.
+             ============================================================ -->
         <div class="left-column">
-            <img src="/images/profile.jpg" alt="Profile">
+            <img src="/images/profile.jpg" alt="Profile photo of Annie Johansson">
             <h1>Annie Johansson</h1>
             <p>PhD Candidate <br> Optimizing Personalized Learning at Scale</p>
             <p>
@@ -25,59 +34,123 @@
                     a.m.johansson2@uva.nl
                 </a>
             </p>
+            <!-- EDIT: Social/academic icon links.
+                 Replace # with your real URLs when you have them.
+                 To remove a link, delete the whole <a> line. -->
+            <div class="social-links">
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <!-- EDIT: Navigation links. Keep class="menu-item" on every link. -->
             <nav class="vertical-menu">
                 <a href="/index.html" class="menu-item">about me</a>
-                <a href="/views/projects.html" class="menu-item">projects</a>
+                <a href="/views/projects.html" class="menu-item active">projects</a>
                 <a href="/views/publications.html" class="menu-item">publications</a>
                 <a href="/views/conferences.html" class="menu-item">conferences and workshops</a>
+                <a href="/views/teaching.html" class="menu-item">teaching</a>
             </nav>
         </div>
 
+        <!-- ============================================================
+             RIGHT COLUMN – main content area
+             ============================================================ -->
         <div class="right-column">
             <h1>projects.</h1>
-        
+
+            <!-- ============================================================
+                 ACTIVE PROJECTS
+                 These are ongoing projects without a full project page yet.
+                 When a project is ready to publish, move it to the
+                 "completed projects" section below and add a "Read more →" link.
+                 ============================================================ -->
+            <h2>ongoing projects</h2>
+
+            <!-- Active Project: Error Types and Quitting -->
             <div class="project-container">
+                <!-- EDIT: Project title -->
+                <h1>Diagnosing Erroneuous Learning Procedures</h1>
+                <!-- EDIT: Authors and year -->
+                <h2>2026</h2>
+                <!-- EDIT: Abstract text -->
+                <p>
+                    When students make errors, it may not always be because they genuinely do not know the
+                    answer. Observed errors may reflect a heterogeneous mixture of cognitive (procedural mistakes,
+                    incorrect memory retrieval, or strategic behavior) and non-cognitive
+                    (inattention, demotivation, or disengagement) influences. And at the level of
+                    specific cognitive mechanisms, errors can result from one of several misconceptions --
+                    answering `18' to the multiplication item `9x9' can be the result of mistakenly adding the
+                    digits, inverting them, or simply incorrectly retrieving the answer to a different
+                    multiplication item.
+
+                    Over several projects, we aim to disentangle these different types of errors and their
+                    consequences for learning and motivation.
+
+                </p>
+                <!-- EDIT: Add a GitHub link when the repo is ready to share publicly -->
+                <p>
+                    <b>Interested in collaborating on this project? Get in touch with me!<b>
+                </p>
+            </div>
+
+            <!-- ============================================================
+                 COMPLETED PROJECTS
+                 Projects with a full page and/or published preprint.
+                 ============================================================ -->
+            <h2>completed projects</h2>
+
+            <!-- Project 1: Three Strikes -->
+            <div class="project-container">
+                <!-- EDIT: Project title -->
                 <h1>Three Strikes and Who is Out? Individual Differences in Error-Induced Quitting</h1>
-                <h2> Annie M. Johansson, Alexander O. Savi, Han L. J. van der Maas, and Abe D. Hofman, 2024. </h2>
+                <!-- EDIT: Authors and year -->
+                <h2>Annie M. Johansson, Alexander O. Savi, Han L. J. van der Maas, and Abe D. Hofman, 2025.</h2>
+                <!-- EDIT: Abstract text -->
                 <p>
-                    The biggest threat to learning is not engaging in it. Crucially, sequential errors have been found to be an important 
-                    cause of quitting from educational practice. However, little is known about how students are differently affected by 
-                    sequential errors. Here, we investigate the underlying factors. Using intensive longitudinal practicing data from over 
-                    200,000 primary-school students in a large-scale Online Learning Environment (OLE), we confirm previous findings that 
-                    sequential errors strongly increase the probability of quitting from learning. Second, we find large variability in this 
-                    effect, ranging from no or small tendencies to quit to high sensitivities to 
-                    quitting following sequential errors. We validate these results in an independent dataset and show that individual 
-                    differences are stable across two arithmetic practice domains. Our results corroborate the theoretical notion that 
-                    students differ in their tolerance to failure and pinpoint a need to individualize how computer-adaptive systems 
-                    intervene after errors.
+                    The biggest threat to learning is not engaging in it. Crucially, sequential errors have been found
+                    to be an important cause of quitting from educational practice. However, little is known about how
+                    students are differently affected by sequential errors. Using intensive longitudinal practicing data
+                    from over 200,000 primary-school students in a large-scale online learning environment, we confirm
+                    that sequential errors strongly increase the probability of quitting. We find large variability in
+                    this effect — ranging from no sensitivity to very high sensitivity to quitting following sequential
+                    errors — and show that individual differences are stable across two arithmetic practice domains.
+                    Our results corroborate the theoretical notion that students differ in their tolerance to failure
+                    and pinpoint a need to individualize how computer-adaptive systems intervene after errors.
                 </p>
-                <p>
-                    <a target="_blank" href="https://ann1ejohansson.github.io/three-strikes/">Project Page</a> <br>
-                    <a target="_blank" href="https://osf.io/preprints/psyarxiv/6tduv">Preprint</a> 
-                </p>
+                <!-- EDIT: Link to the full project page (inside views/projects/) -->
+                <p><a class="read-more" href="/views/projects/three-strikes.html">Read more →</a></p>
             </div>
-        
+
+            <!-- Project 2: IRTree / Problem Skipping -->
             <div class="project-container">
-                <h1>A Problem That Shouldn’t Be Skipped: Problem Skipping Limits the Accuracy of Ability Estimates in Online Learning</h1>
-                <h2> Annie M. Johansson, Alexander O. Savi, and Abe D. Hofman, 2024. </h2>
+                <!-- EDIT: Project title -->
+                <h1>A Problem That Shouldn't Be Skipped: Problem Skipping Limits the Accuracy of Ability Estimates in
+                    Online Learning</h1>
+                <!-- EDIT: Authors and year -->
+                <h2>Annie M. Johansson, Alexander O. Savi, and Abe D. Hofman, 2025.</h2>
+                <!-- EDIT: Abstract text -->
                 <p>
-                    The estimation of student ability is paramount in large-scale personalized learning. To this end, state-of-the-art 
-                    adaptive learning environments use item response theory (IRT). Previous work in traditional learning assessment has 
-                    demonstrated that unidimensional IRT models fall short in adequately estimating ability when items on a test are 
-                    skipped. In this study, we extend this work to online learning platforms. We analyze data from a large-scale online learning 
-                    platform used to practice Arithmetic and Language. Using the IRTree framework, we compare the unidimensional model of 
-                    accuracy to a multidimensional model which additionally accounts for the decision to respond or skip a problem. We 
-                    found support for problem-skipping as a non-ignorable process: students that were more likely to problem-skip were more 
-                    likely to make erroneous responses. Further exploration revealed individual differences in the strategies involved with 
-                    problem-skipping. To ensure that learning analytic tools are supported by fair measurement models, we suggest several 
-                    ways to account for problem-skipping when estimating student ability.
+                    The estimation of student ability is paramount in large-scale personalized learning.
+                    State-of-the-art
+                    adaptive learning environments use item response theory (IRT), but standard models assume that
+                    skipped problems are missing at random. Using data from a large-scale online learning platform,
+                    we apply the IRTree framework to model the decision to skip as a latent process separate from
+                    accuracy. We find that problem-skipping is non-ignorable: students who skipped more were more
+                    likely to make erroneous responses, yet skipping and accuracy are distinct traits. Ignoring
+                    problem-skipping leads to biased ability estimates, particularly for students who skip frequently.
+                    We discuss several ways to account for this process to ensure fair measurement in adaptive systems.
                 </p>
-                <p>
-                    <a target="_blank" href="/files/preprint-2025.pdf">Preprint</a> <br>
-                    <a target="_blank" href="/files/2024-iops-poster.pdf">Poster</a>
-                </p>
+                <!-- EDIT: Link to the full project page (inside views/projects/) -->
+                <p><a class="read-more" href="/views/projects/irtree.html">Read more →</a></p>
             </div>
-        </div>        
+
+            <!-- --------------------------------------------------------
+                 ADD MORE PROJECTS HERE following the same pattern
+                 -------------------------------------------------------- -->
+
+        </div>
     </div>
 </body>
 

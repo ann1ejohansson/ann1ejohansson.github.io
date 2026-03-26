@@ -14,18 +14,20 @@ h1 {
     color: #473198;
 }
 
+/* FIXED: was missing px unit — browser was silently ignoring font-size */
 h2 {
     font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
-    font-size: 18;
+    font-size: 18px;
     font-weight: 300;
     color: #473198;
 }
 
+/* FIXED: was missing px unit and semicolon on color */
 h3 {
     font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
-    font-size: 14;
+    font-size: 14px;
     font-weight: 300;
-    color: dimgray 
+    color: dimgray;
 }
 
 .container {
@@ -34,7 +36,7 @@ h3 {
     padding: 20px;
     max-width: 80%;
     margin: auto;
-    height: 75vh;
+    /* FIXED: removed conflicting height: 75vh — min-height: 100vh is sufficient */
     min-height: 100vh;
 }
 
@@ -42,11 +44,16 @@ h3 {
     width: 30%;
     position: sticky;
     top: 0;
-    overflow: hidden;
+    /* FIXED: was overflow: hidden which clipped content if sidebar got long */
+    overflow-y: auto;
     flex: 1;
     text-align: right;
     border-right: 0.5px solid #ccc;
     padding-right: 10px;
+    /* ADDED: breathing room above profile photo */
+    padding-top: 24px;
+    /* Prevent sidebar from overflowing viewport height */
+    max-height: 100vh;
 }
 
 .left-column img {
@@ -68,15 +75,42 @@ h3 {
     margin: 10px 0;
 }
 
+/* ============================================================
+   SOCIAL ICONS ROW (sidebar)
+   Appears below the email link in every page's left column.
+   EDIT: adjust font-size to make icons bigger or smaller.
+   ============================================================ */
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin: 8px 0 4px 0;
+}
+
+.social-links a {
+    color: #473198;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social-links a:hover {
+    color: #1D9FB7;
+    transform: scale(1.15);
+}
+
+/* ============================================================
+   NAVIGATION MENU (sidebar)
+   ============================================================ */
 .vertical-menu {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align items to the right */
+    align-items: flex-end;
     margin-top: 20px;
 }
 
 .vertical-menu .menu-item {
-    text-align: right; /* Align text inside each menu item to the right */
+    text-align: right;
     color: #473198;
     text-decoration: none;
     font-size: 14px;
@@ -94,10 +128,25 @@ h3 {
     transform: scale(0.95);
 }
 
+/* ADDED: active state — marks the current page in the nav.
+   To use: add class="menu-item active" to the link for the current page. */
+.vertical-menu .menu-item.active {
+    background-color: #473198;
+    color: white;
+    border-color: #473198;
+}
+
+/* ============================================================
+   RIGHT COLUMN
+   EDIT: max-width caps line length on wide screens for readability.
+   ============================================================ */
 .right-column {
     flex: 2;
     padding-left: 20px;
+    padding-top: 24px;
     overflow-y: auto;
+    /* ADDED: prevents text lines from becoming too long on wide screens */
+    max-width: 680px;
 }
 
 .right-column h2 {
@@ -112,48 +161,54 @@ h3 {
 }
 
 a {
-    color: #1D9FB7; 
-    text-decoration: underline; 
+    color: #1D9FB7;
+    text-decoration: underline;
 }
 
 a:hover {
     color: #0B7B88;
 }
 
+/* ============================================================
+   PROJECT OVERVIEW (views/projects.html)
+   ============================================================ */
 .project-container {
     margin-bottom: 40px;
     padding: 10px;
 }
 
+/* CHANGED: was 14px grey — now 15px purple so titles are scannable */
 .project-container h1 {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px; 
+    font-size: 15px;
     font-weight: 600;
-    color: #525252;
+    color: #473198;
     margin-bottom: 0px;
-    line-height: 1;
+    line-height: 1.3;
 }
 
 .project-container h2 {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px; 
+    font-size: 14px;
     font-weight: 350;
-    color: #333333;
+    color: #555;
     margin-bottom: 10px;
+    margin-top: 4px;
 }
 
+/* CHANGED: line-height was 1.3 — bumped to 1.5 for comfortable reading */
 .project-container p {
     font-family: Helvetica;
     font-weight: 350;
-    font-size: 13px; 
-    line-height: 1.3;
+    font-size: 13px;
+    line-height: 1.5;
     margin-bottom: 0px;
     color: #333333;
 }
 
 .project-container a {
-    color: #1D9FB7; 
-    text-decoration: underline; 
+    color: #1D9FB7;
+    text-decoration: underline;
     font-size: 14px;
 }
 
@@ -161,28 +216,109 @@ a:hover {
     color: #0B7B88;
 }
 
-/* General Styles for Mobile */
+/* ADDED: "Read more →" link style — distinct from inline links */
+.read-more {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #473198;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+
+.read-more:hover {
+    color: #1D9FB7;
+    text-decoration: none;
+}
+
+/* ============================================================
+   PROJECT DETAIL PAGES (views/projects/[name].html)
+   ============================================================ */
+
+.project-detail-title {
+    font-family: 'Helvetica Light', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #473198;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.project-detail-meta {
+    font-size: 13px;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.project-detail-links {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.project-detail-figure {
+    margin: 24px 0;
+    text-align: center;
+}
+
+/* EDIT: max-width controls how wide the figure is on the page */
+.project-detail-figure img {
+    max-width: 80%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.figure-caption {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.project-detail-findings {
+    font-size: 14px;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.project-detail-findings li {
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+   PROJECTS PAGE – section dividers ("active projects." / "completed projects.")
+   ============================================================ */
+.right-column > h2 {
+    margin-top: 32px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 0.5px solid #ccc;
+}
+
+/* ============================================================
+   TEACHING PAGE (views/teaching.html)
+   ============================================================ */
+.teaching-topics {
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.5;
+    padding-left: 20px;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   Mobile styles
+   ============================================================ */
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center;
-        gap: 10px; 
-        margin-bottom: 20px; 
-    }
-
-    header nav a {
-        display: block; /* Ensure links are block-level for proper alignment */
-        width: 100%; /* Optionally stretch buttons to fill the width */
-        max-width: 200px; /* Limit the width for centered alignment */
-        text-align: center; /* Center the text */
-        padding: 10px; /* Add padding for better tap area */
-        border-radius: 5px; /* Make buttons look nicer with rounded corners */
-    }
-
-
     .container {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .right-column {
@@ -190,54 +326,55 @@ a:hover {
         margin-bottom: 50px;
         flex: none;
         width: 100%;
+        max-width: 100%;
         overflow: hidden;
         height: auto;
+        padding-top: 0;
     }
 
     .left-column {
         flex: none;
         text-align: center;
-        margin-bottom: 50px; 
+        margin-bottom: 50px;
         width: 100%;
+        max-height: none;
+        overflow-y: visible;
         border-right: 0.5px solid transparent;
         border-bottom: 0.5px solid #ccc;
         position: relative;
+        padding-top: 16px;
     }
 
     .vertical-menu {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center menu items horizontally */
-        gap: 10px; /* Add space between menu items */
-    }
-
-    .vertical-menu a {
         align-items: center;
-        text-align: center;
+        gap: 10px;
     }
 
     .vertical-menu .menu-item {
-        align-items: center;
         text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
     h1 {
         font-size: 16px;
-    } 
-    
+    }
+
     h2, h3, p {
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     img {
-        width: 120px; 
+        width: 120px;
         height: 120px;
     }
+
     a {
-        font-size: 14px; 
-        
-        display: inline-block; /* Ensure clickable area */
+        font-size: 14px;
+        display: inline-block;
     }
 }
-
-
