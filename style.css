@@ -162,7 +162,7 @@ a:hover {
 }
 
 .social-links a:hover {
-    color: var(--purple);
+    color: var(--teal);
     transform: scale(1.2);
     text-decoration: none;
 }
@@ -185,7 +185,7 @@ a:hover {
 .vertical-menu {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: fit-content;
     margin: 0 auto;
     gap: 0;
@@ -203,6 +203,7 @@ a:hover {
     transition: color 0.18s, border-color 0.18s;
     white-space: nowrap;
     display: block;
+    text-align: center;
 }
 
 .vertical-menu .menu-item:hover {
